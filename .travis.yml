@@ -10,4 +10,4 @@ jobs:
   - name: "pypy Unit Tests"
     python: "test"
     env: TEST_SUITE=suite_pypy_unit
-script: ./test.py $TEST_SUITE
+script: test.py $TEST_SUITE
