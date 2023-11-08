@@ -1,8 +1,18 @@
-rvm:
-- 2.5
-- 2.2
-gemfile:
-- gemfiles/Gemfile.rails-3.2.x
-- gemfiles/Gemfile.rails-3.0.x
-env:
-- ISOLATED=true
+jobs:
+  include:
+    - os: linux
+      language: python
+      python:
+       - "3.8"
+      arch: amd64
+      dist: focal
+      script:
+        - python hello_world.py
+        - os: linux
+      language: python
+      python:
+       - "3.8"
+      arch: amd64
+      dist: focal
+      script:
+        - python How are you.py
