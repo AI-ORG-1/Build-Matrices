@@ -1,8 +1,14 @@
+language: ruby
+rvm:
+- 1.9.3
+- 2.0.0
+- 2.1.0
+env:
+- DB=mongodb SUITE=all
+- DB=mongodb SUITE=compact
+- DB=redis
+- DB=mysql
 jobs:
   exclude:
-  - rvm: 1.9.3
-    gemfile: gemfiles/Gemfile.rails-2.3.x
-    env: ISOLATED=true
-  - rvm: jruby
-    gemfile: gemfiles/Gemfile.rails-2.3.x
-    env: ISOLATED=true
+    - rvm: 1.9.3
+      env: DB=mongodb
